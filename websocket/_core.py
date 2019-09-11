@@ -219,6 +219,7 @@ class WebSocket(object):
         # FIXME: "subprotocols" are getting lost, not passed down
         # FIXME: "header", "cookie", "origin" and "host" too
         self.sock_opt.timeout = options.get('timeout', self.sock_opt.timeout)
+        self.sock_opt.source_address = options.get('source_address')
         self.sock, addrs = connect(url, self.sock_opt, proxy_info(**options),
                                    options.pop('socket', None))
 

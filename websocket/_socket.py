@@ -56,6 +56,7 @@ class sock_opt(object):
         self.sockopt = sockopt
         self.sslopt = sslopt
         self.timeout = None
+        self.source_address = None
 
 
 def setdefaulttimeout(timeout):
